@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Anonymous Harassment Support</title>
+<style>
+body { font-family: Arial; background:#f4f6f9; }
+.container {
+    max-width:800px; margin:30px auto; background:white;
+    padding:20px; border-radius:8px;
+}
+textarea { width:100%; }
+button { padding:8px; margin:5px; }
+</style>
+</head>
+
+<body>
+<div class="container">
+<h2>🛡️ Anonymous Harassment Support</h2>
+
+<p><b>Anonymous ID:</b> {{ session_id }}</p>
+
+<select id="lang">
+<option>English</option>
+<option>Telugu</option>
+</select>
+
+<textarea id="chatLog" rows="14" readonly></textarea><br>
+<input id="userInput" placeholder="Type here..." size="60">
+<br><br>
+
+<button onclick="sendMessage()">Send</button>
+<button onclick="startVoice()">🎤 Speak</button>
+<button onclick="downloadPDF()">📄 Download Report</button>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
